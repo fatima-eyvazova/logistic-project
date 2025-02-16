@@ -1,0 +1,30 @@
+<section id="partners" class="partners-section">
+  <div class="partners-container">
+    <div class="partners-header">
+      <div class="partners-content">
+        <h5 class="section-subtitle">Partners</h5>
+        <h2 class="section-title">
+          Our Global <br />
+          Partner Network
+        </h2>
+        <p class="partners-description">
+          Our partners play a crucial role in ensuring efficiency, innovation,
+          <br />
+          and global reach in our services.
+        </p>
+      </div>
+    </div>
+
+    <div class="partners-list">
+      <div class="partner-item" *ngFor="let partner of partners">
+        <img [src]="partner.img" [alt]="partner.name" />
+        <div class="partner-info">
+          <p class="partner-info-name">{{ partner.name }}</p>
+          <span class="partner-info-description">{{
+            partner.description
+          }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

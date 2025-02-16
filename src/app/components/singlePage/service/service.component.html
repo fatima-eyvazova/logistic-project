@@ -1,0 +1,69 @@
+<section id="service">
+  <div class="service-top">
+    <div class="service-top-container">
+      <div class="service-content">
+        <h5 class="service-subtitle">Our Service</h5>
+        <h2 class="service-title">Our Range of Logistics Services</h2>
+        <p class="service-description">
+          Our state-of-the-art facilities and innovative technology support
+          e-commerce fulfillment and project cargo handling, providing you with
+          tailored solutions.
+        </p>
+      </div>
+      <div class="expand-content">
+        <div class="expand-container">
+          <div
+            *ngFor="let slide of slides"
+            class="expand-slide"
+            [ngClass]="slide.extraClass"
+          >
+            <img
+              [src]="slide.imgSrc"
+              [alt]="slide.altText"
+              class="expand-slide-img"
+            />
+            <div class="expand-content">
+              <div class="expand-icon">
+                <img [src]="slide.iconSrc" [alt]="slide.altText + ' Icon'" />
+              </div>
+              <h2 class="expand-title">{{ slide.title }}</h2>
+              <p>{{ slide.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service-bottom">
+    <div class="video-container">
+      <div class="video-img">
+        <img
+          src="https://glloc.com/assets/img/service/v-play.png"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+    <div class="why-choose-us">
+      <div class="container-why-choose">
+        <div class="why-choose-header">
+          <h5 class="subtitle">Why Choose Us?</h5>
+          <h2 class="title">Efficient Working Process</h2>
+          <p>
+            Our approach ensures efficient, reliable, and customized logistics
+            solutions, guiding you seamlessly from consultation to final
+            delivery.
+          </p>
+        </div>
+        <div class="features">
+          <div *ngFor="let feature of features" class="feature">
+            <div class="icon">
+              <img [src]="feature.icon" [alt]="feature.title" />
+            </div>
+            <h4 class="feature-title">{{ feature.title }}</h4>
+            <p class="feature-description">{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

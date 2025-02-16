@@ -1,0 +1,71 @@
+<div class="register-page">
+  <div class="register-box">
+    <div class="logo">
+      <img
+        src="https://cb.glloc.com/assets/images/glloc_logo_white.svg"
+        alt="Logo"
+        class="logo-img"
+      />
+    </div>
+    <div class="form-container">
+      <h6 class="form-header">Sign up</h6>
+      <form class="register-form" novalidate>
+        <div class="form-field">
+          <label for="firstName">Name Surname</label>
+          <input
+            matInput
+            formControlName="firstName"
+            id="firstName"
+            class="input-field"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input
+            matInput
+            formControlName="email"
+            id="email"
+            class="input-field"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="phone1">Phone</label>
+          <input
+            matInput
+            type="text"
+            formControlName="phone1"
+            id="phone1"
+            class="input-field"
+            required
+          />
+        </div>
+
+        <div class="role-selection">
+          <div class="role-item">
+            <p>Personal</p>
+          </div>
+          <div class="checkbox-wrapper">
+            <input
+              id="cbx"
+              type="checkbox"
+              formControlName="myroleId"
+              class="checkbox-input"
+            />
+            <label for="cbx" class="checkbox-label"></label>
+          </div>
+          <div class="role-item">
+            <p>Juridical person</p>
+          </div>
+        </div>
+
+        <div class="submit-btn">
+          <button class="btn" disabled>Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

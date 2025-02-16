@@ -1,0 +1,134 @@
+@mixin responsive-image {
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+$primary-color: #348f92;
+$white-color: #ffff;
+
+#home {
+  .home-content {
+    height: 1000px;
+    background: #f8f9fa;
+    position: relative;
+    z-index: 1;
+    .container-shape {
+      padding-bottom: 30px;
+      .home-shapes {
+        img {
+          position: absolute;
+          right: 0;
+          width: 50%;
+        }
+      }
+
+      .home-top-shape {
+        img {
+          right: 0;
+          width: 50%;
+          position: absolute;
+          z-index: -1;
+          vertical-align: middle;
+        }
+      }
+
+      .home-image {
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        img {
+          @include responsive-image;
+        }
+      }
+
+      .home-shape {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+
+        img {
+          @include responsive-image;
+        }
+      }
+      .home-ovarley {
+        position: absolute;
+        img {
+          @include responsive-image;
+        }
+      }
+    }
+
+    .container-home {
+      padding-top: 230px;
+      padding-left: 60px;
+      .home-text {
+        .home-subtitle {
+          font-weight: 400;
+          padding: 10px 15px 11px 27px;
+          display: inline-block;
+          line-height: 16px;
+          font-size: 23px;
+          background: #e7edf6;
+          border-radius: 50px;
+          position: relative;
+          color: $primary-color;
+        }
+        .home-title {
+          padding: 20px 0;
+          font-weight: 600;
+          color: #00060f;
+          line-height: 1.2;
+          font-size: 3rem;
+        }
+        p {
+          padding-bottom: 32px;
+          padding-top: 16px;
+          font-size: 20px;
+          line-height: 1.2;
+        }
+        .home-btn {
+          &:hover {
+            background: $primary-color;
+            transition: 0.3s;
+          }
+          text-decoration: none;
+          color: $white-color;
+          font-weight: 700;
+          text-align: center;
+          transition: 0.3s;
+          z-index: 1;
+          border-radius: 50px;
+          display: inline-block;
+          line-height: 16px;
+          font-size: 22px;
+          padding: 20px 26px;
+          position: relative;
+          background: $primary-color;
+          i {
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            padding: 5px 6px;
+            background: #10777c;
+          }
+        }
+        .home-btn::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background: #103a3d;
+          z-index: -1;
+          transition: 0.3s;
+          transform: scaleX(0);
+        }
+        .home-btn:hover::after {
+          transform: scaleX(1);
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}
