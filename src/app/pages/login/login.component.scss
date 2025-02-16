@@ -1,0 +1,158 @@
+$green-color: #348f92;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login {
+  @include flex-center;
+  flex-direction: column;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("https://img.freepik.com/free-vector/gradient-emerald-background_23-2150237162.jpg");
+
+  .logo-login {
+    margin-bottom: 20px;
+
+    .glloc_logo {
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 45%;
+      width: 220px;
+      height: 350px;
+    }
+  }
+
+  .form-container-login {
+    border-radius: 20px;
+    background: #fff;
+    width: 28vw;
+    height: 57vh;
+    padding: 40px;
+    margin-top: 10vw;
+
+    .login-form {
+      .form-header-login {
+        color: $green-color;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .form-login-input {
+        width: 100%;
+        margin-bottom: 25px;
+
+        .form-input-login {
+          width: 24vw;
+          border-radius: 10px;
+          border: 1px solid #e7e6e6;
+          background: #fff;
+          height: 40px;
+          padding: 30px;
+
+          &:focus {
+            border-color: #4e8ff7;
+            box-shadow: 0 0 5px rgba(78, 143, 247, 0.2);
+          }
+        }
+      }
+
+      .form-login-controller {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+
+        .form-label-input {
+          display: flex;
+          align-items: center;
+
+          .form-check-input {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin: 5px;
+          }
+          .form-check-input[type="checkbox"] {
+            border-radius: 0.25em;
+          }
+
+          .form-check-label {
+            color: #787878;
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+
+        .forgot-password {
+          color: $green-color;
+          text-decoration: none;
+          font-size: 18px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .btn-container-login {
+        width: 100%;
+        margin-bottom: 15px;
+
+        .btn-login {
+          width: 100%;
+          display: flex;
+          padding: 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          font-size: 20px;
+          border-radius: 10px;
+          background: $green-color;
+          color: #fff;
+          border: 1px solid $green-color;
+          margin-top: 48px;
+          margin-bottom: 8px;
+
+          &:hover {
+            background-color: #0c6b51;
+          }
+
+          &:disabled {
+            background-color: #72999c;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .info-login {
+        text-align: center;
+        font-size: 14px;
+
+        .info-login-text {
+          text-align: center;
+          color: #999;
+          font-size: 14px;
+          font-weight: 400;
+          .signup-location {
+            color: #0f6843;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

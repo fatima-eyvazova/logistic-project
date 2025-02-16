@@ -9,45 +9,26 @@
     </div>
     <div class="form-container">
       <h6 class="form-header">Sign up</h6>
-      <form class="register-form" novalidate>
+      <form class="register-form">
         <div class="form-field">
-          <label for="firstName">Name Surname</label>
           <input
-            matInput
             formControlName="firstName"
             id="firstName"
             class="input-field"
-            required
+            placeholder="Name Surname"
           />
         </div>
 
         <div class="form-field">
-          <label for="email">E-mail</label>
-          <input
-            matInput
-            formControlName="email"
-            id="email"
-            class="input-field"
-            required
-          />
+          <input id="email" class="input-field" placeholder="E-mail" />
         </div>
 
         <div class="form-field">
-          <label for="phone1">Phone</label>
-          <input
-            matInput
-            type="text"
-            formControlName="phone1"
-            id="phone1"
-            class="input-field"
-            required
-          />
+          <input type="text" class="input-field" placeholder="Phone" />
         </div>
 
         <div class="role-selection">
-          <div class="role-item">
-            <p>Personal</p>
-          </div>
+          <p class="role-item-text">Personal</p>
           <div class="checkbox-wrapper">
             <input
               id="cbx"
@@ -55,11 +36,12 @@
               formControlName="myroleId"
               class="checkbox-input"
             />
-            <label for="cbx" class="checkbox-label"></label>
+            <label for="cbx" class="checkbox-label">
+              <span class="slider"></span>
+            </label>
           </div>
-          <div class="role-item">
-            <p>Juridical person</p>
-          </div>
+
+          <p class="role-item">Juridical person</p>
         </div>
 
         <div class="submit-btn">

@@ -1,0 +1,162 @@
+$green-color: #348f92;
+$black-color: #000;
+
+@mixin form-controle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $black-color;
+  margin: 0;
+  padding-left: 16px;
+  margin: 0 0 12px;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-page {
+  @include flex-center;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("https://img.freepik.com/free-vector/gradient-emerald-background_23-2150237162.jpg");
+
+  .register-box {
+    .logo {
+      margin-bottom: 20px;
+
+      .logo-img {
+        z-index: 2;
+        position: absolute;
+        top: 4%;
+        left: 45.5%;
+        width: 200px;
+      }
+    }
+
+    .form-container {
+      @include flex-center;
+      flex-direction: column;
+      border-radius: 20px;
+      background: #fff;
+      width: 25vw;
+      height: 60vh;
+      padding: 35px;
+      .form-header {
+        color: $green-color;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        padding-bottom: 20px;
+        margin: 0 0 12px;
+      }
+
+      .register-form {
+        .form-field {
+          margin-bottom: 20px;
+          text-align: left;
+
+          input {
+            border-radius: 10px;
+            border: 1px solid #e7e6e6;
+            background: #fff;
+            width: 22vw;
+            padding: 20px;
+
+            &:focus {
+              border-color: #007bff;
+            }
+
+            &.input-field {
+              transition: border-color 0.3s ease;
+            }
+          }
+        }
+        .role-selection {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          .role-item-text {
+            @include form-controle;
+          }
+
+          .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .checkbox-input {
+              position: absolute;
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            .checkbox-label {
+              display: inline-block;
+              width: 50px;
+              height: 24px;
+              background-color: #ccc;
+              border-radius: 50px;
+              cursor: pointer;
+              position: relative;
+              transition: background-color 0.3s ease;
+
+              .slider {
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                width: 18px;
+                height: 18px;
+                background-color: white;
+                border-radius: 50%;
+                transition: transform 0.3s ease;
+              }
+            }
+
+            .checkbox-input:checked + .checkbox-label {
+              background-color: rgb(23, 187, 23);
+            }
+
+            .checkbox-input:checked + .checkbox-label .slider {
+              transform: translateX(26px);
+            }
+          }
+          .role-item {
+            @include form-controle;
+          }
+        }
+        .submit-btn {
+          .btn {
+            width: 100%;
+            display: flex;
+            padding: 18px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: $green-color;
+            color: #fff;
+            border: 1px solid $green-color;
+            margin-top: 48px;
+            margin-bottom: 8px;
+            font-size: 20px;
+            disabled {
+              background-color: #cccccc;
+              cursor: not-allowed;
+            }
+
+            &:hover {
+              background-color: #209d8f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -12,6 +12,19 @@ const routes: Routes = [
       ),
   },
   { path: 'register', component: RegisterComponent },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/login/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./pages/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+  },
+
   { path: '**', redirectTo: 'singlepage' },
 ];
 
