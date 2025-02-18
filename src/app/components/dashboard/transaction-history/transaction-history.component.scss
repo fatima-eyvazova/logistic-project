@@ -1,0 +1,77 @@
+.panel {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  width: 35vw;
+  height: 55vh;
+  .panel-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .transaction {
+    margin-bottom: 20px;
+
+    .transaction-date {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #4b5563;
+      margin-bottom: 10px;
+    }
+
+    .transaction-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e7eb;
+
+      .icon {
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-content: center;
+        border-radius: 50%;
+        background-color: #e0e7ff;
+        color: #3b82f6;
+        margin-right: 15px;
+
+        &.income-icon {
+          background-color: #d1fae5;
+          color: #10b981;
+        }
+
+        &.expenses-icon {
+          background-color: #fef2f2;
+          color: #ef4444;
+        }
+
+        svg {
+          stroke-width: 1.5;
+        }
+      }
+
+      .info-icome {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 600;
+
+        .info-history {
+          font-size: 0.9375rem;
+          color: #4b5563;
+        }
+
+        p {
+          font-size: 0.875rem;
+          color: #374151;
+        }
+      }
+    }
+  }
+}
