@@ -1,0 +1,51 @@
+{
+  "transactions": [
+    {
+      "date": "18.02.2025",
+      "income": 0,
+      "titleIncome": "Income",
+      "expenses": 0,
+      "titleexpenses": "Expenses"
+    },
+    {
+      "date": "17.02.2025",
+      "income": 0,
+      "titleIncome": "Income",
+      "expenses": 0,
+      "titleexpenses": "Expenses"
+    }
+  ],
+
+  "chartOptions": {
+    "chart": {
+      "type": "area",
+      "height": 620,
+      "width": 1200,
+      "zoom": {
+        "enabled": false
+      }
+    },
+    "series": [
+      {
+        "name": "Income",
+        "data": [0, 0.26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    }
+  }
+}

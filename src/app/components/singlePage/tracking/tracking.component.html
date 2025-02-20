@@ -9,19 +9,27 @@
   </div>
 
   <form class="tracking-form">
-    <select class="form-select">
+    <select
+      class="form-select"
+      [(ngModel)]="trackingType"
+      name="trackingType"
+      (change)="updatePlaceholder()"
+    >
       <option value="1">Wagon</option>
       <option value="2">Container</option>
       <option value="3">Booking no</option>
     </select>
+
     <div class="form-input">
       <input
         type="text"
-        formControlName="wagonNo"
-        placeholder="Enter Container №"
+        [(ngModel)]="wagonNo"
+        name="wagonNo"
+        [placeholder]="inputPlaceholder"
         class="form-input"
       />
     </div>
+
     <div class="form-btn">
       <span class="search-btn">SEARCH</span>
       <span class="row-icon">

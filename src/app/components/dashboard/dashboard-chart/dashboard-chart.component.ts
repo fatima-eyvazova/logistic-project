@@ -7,8 +7,11 @@ import {
   NgApexchartsModule,
 } from 'ng-apexcharts';
 
+import * as mockData from '../../../../../public/data.json';
+
 @Component({
   selector: 'app-dashboard-chart',
+  standalone: true,
   imports: [NgApexchartsModule],
   templateUrl: './dashboard-chart.component.html',
   styleUrls: ['./dashboard-chart.component.scss'],
@@ -16,59 +19,36 @@ import {
 export class DashboardChartComponent {
   public chartOptions: {
     chart: ApexChart;
-    series: ApexAxisChartSeries | ApexNonAxisChartSeries;
+    series: ApexAxisChartSeries;
     xaxis: {};
-    yaxis: ApexYAxis | ApexYAxis[];
+    yaxis: ApexYAxis;
     tooltip: ApexTooltip;
   };
 
   constructor() {
+    const data = mockData.chartOptions;
+    const categories = mockData.chartOptions.xaxis.categories;
+
     this.chartOptions = {
       chart: {
         type: 'area',
-        height: 620,
-        width: 1200,
-        zoom: {
-          enabled: false,
-        },
+        height: 500,
+        zoom: { enabled: false },
       },
-      series: [
-        {
-          name: 'Income',
-          data: [0, 0.26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        },
-      ],
+      series: data.series,
       xaxis: {
-        categories: [
-          'Jan',
-          'Feb',
-          'Mar',
-          'Apr',
-          'May',
-          'Jun',
-          'Jul',
-          'Aug',
-          'Sep',
-          'Oct',
-          'Nov',
-          'Dec',
-        ],
+        categories: categories,
       },
       yaxis: {
         labels: {
-          formatter: function (val: any) {
-            return val + 'K';
-          },
+          formatter: (val: number) => val + 'K',
         },
         tickAmount: 7,
       },
-
       tooltip: {
         enabled: true,
         y: {
-          formatter: function (val: any) {
-            return val + 'K';
-          },
+          formatter: (val: number) => val + 'K',
         },
       },
     };

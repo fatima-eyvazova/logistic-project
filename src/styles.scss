@@ -6,3 +6,32 @@
   font-size: 16px;
   font-weight: 400;
 }
+
+.dark-mode {
+  background-color: #2e2e2e;
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode {
+  background-color: #0c0921 !important;
+  color: rgb(130, 127, 127) !important;
+}
+.dark-mode .panel,
+.dark-mode .chart-dashboard,
+.dark-mode .dashboard-header,
+.dark-mode .dashboard-tables tbody {
+  color: rgb(130, 127, 127) !important;
+  background: rgb(21 33 53) !important;
+}
+.dark-mode .dashboard-tables table tbody td {
+  background: rgb(21 33 53) !important;
+}
+.dark-mode .dashboard-tables table thead tr th {
+  color: rgb(130, 127, 127) !important;
+  background: rgb(21 33 53) !important;
+}
+
+.light-change {
+  cursor: pointer;
+}

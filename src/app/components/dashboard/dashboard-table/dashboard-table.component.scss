@@ -1,11 +1,13 @@
 .dashboard-tables {
   display: flex;
-  width: 70vw;
+  width: 61vw;
+  gap: 30px;
   justify-content: space-between;
   align-items: center;
+
   table {
     width: 30vw;
-    height: 25vh;
+    height: 28vh;
     border-collapse: collapse;
     border-radius: 12px;
     overflow: hidden;
@@ -18,7 +20,7 @@
 
       th {
         padding: 16px 12px;
-        text-align: left;
+        text-align: center;
         font-size: 14px;
         font-weight: 600;
         color: #ecf3f0;
@@ -53,7 +55,6 @@
           color: #333;
           text-align: center;
           background-color: #fff;
-          border-bottom: 1px solid #e0e0e0;
           border-right: 1px solid #e0e0e0;
 
           &:last-child {

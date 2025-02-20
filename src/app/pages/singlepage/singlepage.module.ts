@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SinglepageComponent } from './singlepage.component';
-import { HomeComponent } from '../../components/singlePage/home/home.component';
-import { AboutComponent } from '../../components/singlePage/about/about.component';
+import { FormsModule } from '@angular/forms';
+import { ServiceComponent } from '../../components/singlePage/service/service.component';
+import { PartnersComponent } from '../../components/singlePage/partners/partners.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    SinglepageComponent,
-    HomeComponent,
-    AboutComponent,
-
+    FormsModule,
+    ServiceComponent,
+    PartnersComponent,
     RouterModule.forChild([
       {
         path: '',
@@ -19,6 +19,6 @@ import { AboutComponent } from '../../components/singlePage/about/about.componen
       },
     ]),
   ],
-  exports: [SinglepageComponent],
+  exports: [PartnersComponent],
 })
 export class SinglepageModule {}
