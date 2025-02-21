@@ -18,15 +18,19 @@ export class AuthService {
       (user: { email: string; password: string }) =>
         user.email === email && user.password === password
     );
-    return !!user;
+
+    if (user) {
+      localStorage.setItem('isLoggedIn', 'true');
+      return true;
+    }
+    return false;
   }
 
   isLoggedIn(): boolean {
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
-    return users.length > 0;
+    return localStorage.getItem('isLoggedIn') === 'true';
   }
 
   logout(): void {
-    localStorage.removeItem('users');
+    localStorage.setItem('isLoggedIn', 'false');
   }
 }

@@ -20,7 +20,8 @@
         />
         <p
           *ngIf="
-            loginForm.controls.email.invalid && loginForm.controls.email.touched
+            loginForm.controls['email'].invalid &&
+            loginForm.controls['email'].touched
           "
         >
           Please enter a valid email.
@@ -34,10 +35,11 @@
           placeholder="Password"
           formControlName="password"
         />
+
         <p
           *ngIf="
-            loginForm.controls.password.invalid &&
-            loginForm.controls.password.touched
+            loginForm.controls['password'].invalid &&
+            loginForm.controls['password'].touched
           "
         >
           Password must be at least 6 characters.

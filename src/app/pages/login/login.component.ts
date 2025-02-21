@@ -7,12 +7,13 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../service/auth.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
 })
 export class LoginComponent {
   loginForm: FormGroup;
