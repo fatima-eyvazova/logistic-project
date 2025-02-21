@@ -6,7 +6,13 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SinglepageModule, RegisterModule, FormsModule],
+  imports: [
+    RouterOutlet,
+    SinglepageModule,
+    RegisterModule,
+    FormsModule,
+    RegisterModule,
+  ],
   templateUrl: './app.component.html',
 })
 export class AppComponent {

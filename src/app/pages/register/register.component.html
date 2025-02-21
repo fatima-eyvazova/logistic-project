@@ -9,33 +9,48 @@
     </div>
     <div class="form-container">
       <h6 class="form-header">Sign up</h6>
-      <form class="register-form">
-        <div class="form-field">
+      <form
+        class="register-form"
+        [formGroup]="registerForm"
+        (ngSubmit)="onRegister()"
+      >
+        <!-- <div class="form-field">
           <input
             formControlName="firstName"
-            id="firstName"
             class="input-field"
             placeholder="Name Surname"
           />
+        </div> -->
+
+        <div class="form-field">
+          <input
+            id="email"
+            class="input-field"
+            formControlName="email"
+            placeholder="E-mail"
+          />
+          <!-- <p
+            *ngIf="
+              registerForm.controls.password.invalid &&
+              registerForm.controls.password.touched
+            "
+          >
+            Password must be at least 6 characters.
+          </p> -->
         </div>
 
         <div class="form-field">
-          <input id="email" class="input-field" placeholder="E-mail" />
-        </div>
-
-        <div class="form-field">
-          <input type="text" class="input-field" placeholder="Phone" />
+          <input
+            formControlName="password"
+            type="password"
+            placeholder="Password"
+          />
         </div>
 
         <div class="role-selection">
           <p class="role-item-text">Personal</p>
           <div class="checkbox-wrapper">
-            <input
-              id="cbx"
-              type="checkbox"
-              formControlName="myroleId"
-              class="checkbox-input"
-            />
+            <input id="cbx" type="checkbox" class="checkbox-input" />
             <label for="cbx" class="checkbox-label">
               <span class="slider"></span>
             </label>
@@ -45,7 +60,10 @@
         </div>
 
         <div class="submit-btn">
-          <button class="btn" disabled>Next</button>
+          <button class="btn" type="submit" [disabled]="registerForm.invalid">
+            Next
+          </button>
+          <p>{{ message }}</p>
         </div>
       </form>
     </div>

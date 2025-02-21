@@ -5,8 +5,9 @@ import { AppComponent } from './app/app.component';
 import { AppRoutingModule } from './app/app-routing.module';
 import { SinglepageModule } from './app/pages/singlepage/singlepage.module';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RegisterModule } from './app/pages/register/register.module';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -15,8 +16,10 @@ bootstrapApplication(AppComponent, {
       RouterModule,
       SinglepageModule,
       NgApexchartsModule,
+      RegisterModule,
       FormsModule,
-      CommonModule
+      CommonModule,
+      ReactiveFormsModule
     ),
   ],
 }).catch((err) => console.error(err));
