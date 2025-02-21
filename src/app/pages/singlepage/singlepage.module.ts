@@ -5,6 +5,7 @@ import { SinglepageComponent } from './singlepage.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceComponent } from '../../components/singlePage/service/service.component';
 import { PartnersComponent } from '../../components/singlePage/partners/partners.component';
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { PartnersComponent } from '../../components/singlePage/partners/partners
     FormsModule,
     ServiceComponent,
     PartnersComponent,
+    ScrollAnimationDirective,
     RouterModule.forChild([
       {
         path: '',

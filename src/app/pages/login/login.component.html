@@ -23,6 +23,7 @@
             loginForm.controls['email'].invalid &&
             loginForm.controls['email'].touched
           "
+          class="error-message-login"
         >
           Please enter a valid email.
         </p>
@@ -41,6 +42,7 @@
             loginForm.controls['password'].invalid &&
             loginForm.controls['password'].touched
           "
+          class="error-message-login"
         >
           Password must be at least 6 characters.
         </p>
@@ -63,6 +65,7 @@
         >
           Log in
         </button>
+        <p class="incorrect-message">{{ message }}</p>
       </div>
 
       <div class="info-login">
@@ -71,7 +74,6 @@
           <a href="/register" class="signup-location">Sign up here</a>
         </p>
       </div>
-      <p>{{ message }}</p>
     </form>
   </div>
 </div>

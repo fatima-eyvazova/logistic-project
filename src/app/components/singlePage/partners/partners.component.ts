@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollAnimationDirective } from '../../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-partners',
   templateUrl: './partners.component.html',
   styleUrls: ['./partners.component.scss'],
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAnimationDirective],
 })
 export class PartnersComponent implements OnInit {
   partners = [

@@ -5,6 +5,39 @@ $primary-color: #348f92;
   align-items: center;
   justify-content: center;
 }
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .partners-section {
   padding: 60px 0;
   background-color: #f9f9f9;
@@ -95,5 +128,21 @@ $primary-color: #348f92;
         }
       }
     }
+  }
+  .hidden {
+    opacity: 0;
+  }
+
+  .animate.section-subtitle {
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+
+  .animate.section-title,
+  .animate.partners-description {
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+
+  .animate.partner-item {
+    animation: fadeInRight 0.8s ease-out forwards;
   }
 }

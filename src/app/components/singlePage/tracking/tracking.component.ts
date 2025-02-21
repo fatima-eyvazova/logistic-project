@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ScrollAnimationDirective } from '../../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-tracking',
   templateUrl: './tracking.component.html',
   styleUrls: ['./tracking.component.scss'],
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ScrollAnimationDirective],
 })
 export class TrackingComponent {
   trackingType: string = '1';

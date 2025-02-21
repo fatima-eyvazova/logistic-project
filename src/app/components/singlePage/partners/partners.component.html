@@ -2,12 +2,12 @@
   <div class="partners-container">
     <div class="partners-header">
       <div class="partners-content">
-        <h5 class="section-subtitle">Partners</h5>
-        <h2 class="section-title">
+        <h5 class="section-subtitle" appScrollAnimation>Partners</h5>
+        <h2 class="section-title" appScrollAnimation>
           Our Global <br />
           Partner Network
         </h2>
-        <p class="partners-description">
+        <p class="partners-description" appScrollAnimation>
           Our partners play a crucial role in ensuring efficiency, innovation,
           <br />
           and global reach in our services.
@@ -16,7 +16,11 @@
     </div>
 
     <div class="partners-list">
-      <div class="partner-item" *ngFor="let partner of partners">
+      <div
+        class="partner-item"
+        *ngFor="let partner of partners"
+        appScrollAnimation
+      >
         <img [src]="partner.img" [alt]="partner.name" />
         <div class="partner-info">
           <p class="partner-info-name">{{ partner.name }}</p>

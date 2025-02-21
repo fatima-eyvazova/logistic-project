@@ -48,7 +48,10 @@ $green-color: #348f92;
       .form-login-input {
         width: 100%;
         margin-bottom: 25px;
-
+        .error-message-login {
+          color: red;
+          padding: 5px;
+        }
         .form-input-login {
           width: 24vw;
           border-radius: 10px;
@@ -107,9 +110,14 @@ $green-color: #348f92;
       .btn-container-login {
         width: 100%;
         margin-bottom: 15px;
-
+        .incorrect-message {
+          color: red;
+          text-align: center;
+          padding: 20px;
+        }
         .btn-login {
           width: 100%;
+          cursor: pointer;
           display: flex;
           padding: 20px;
           justify-content: center;
@@ -127,10 +135,10 @@ $green-color: #348f92;
             background-color: #0c6b51;
           }
 
-          // &:disabled {
-          //   background-color: #72999c;
-          //   // cursor: not-allowed;
-          // }
+          &:disabled {
+            background-color: #72999c;
+            cursor: not-allowed;
+          }
         }
       }
 

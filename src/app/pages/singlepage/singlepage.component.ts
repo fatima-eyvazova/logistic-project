@@ -8,6 +8,8 @@ import { PartnersComponent } from '../../components/singlePage/partners/partners
 import { ContactComponent } from '../../components/singlePage/contact/contact.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { CommonModule } from '@angular/common';
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-singlepage',
@@ -16,6 +18,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
     AboutComponent,
     HomeComponent,
     RouterModule,
+    CommonModule,
     TrackingComponent,
     ServiceComponent,
     PartnersComponent,

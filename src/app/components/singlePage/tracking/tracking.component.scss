@@ -9,6 +9,7 @@ $green-color: #348f92;
   padding-bottom: 70px;
   padding-top: 100px;
   background: #f8f9fa;
+
   .tracking-container {
     .tracking-header {
       opacity: 1;
@@ -138,5 +139,16 @@ $green-color: #348f92;
       transition: 0.3s;
       transform: scaleX(0);
     }
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(90px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .animate {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -2,9 +2,11 @@
   <div class="service-top">
     <div class="service-top-container">
       <div class="service-content">
-        <h5 class="service-subtitle">Our Service</h5>
-        <h2 class="service-title">Our Range of Logistics Services</h2>
-        <p class="service-description">
+        <h5 class="service-subtitle" appScrollAnimation>Our Service</h5>
+        <h2 class="service-title" appScrollAnimation>
+          Our Range of Logistics Services
+        </h2>
+        <p class="service-description" appScrollAnimation>
           Our state-of-the-art facilities and innovative technology support
           e-commerce fulfillment and project cargo handling, providing you with
           tailored solutions.
@@ -16,6 +18,7 @@
             *ngFor="let slide of slides"
             class="expand-slide"
             [ngClass]="slide.extraClass"
+            appScrollAnimation
           >
             <img
               [src]="slide.imgSrc"
@@ -40,22 +43,33 @@
         <img
           src="https://glloc.com/assets/img/service/v-play.png"
           class="img-fluid"
+          appScrollAnimation
         />
       </div>
     </div>
     <div class="why-choose-us">
       <div class="container-why-choose">
         <div class="why-choose-header">
-          <h5 class="subtitle">Why Choose Us?</h5>
-          <h2 class="title">Efficient Working Process</h2>
-          <p>
+          <h5 class="subtitle" appScrollAnimation>Why Choose Us?</h5>
+          <h2 class="title" appScrollAnimation>Efficient Working Process</h2>
+          <p appScrollAnimation>
             Our approach ensures efficient, reliable, and customized logistics
             solutions, guiding you seamlessly from consultation to final
             delivery.
           </p>
         </div>
+
         <div class="features">
-          <div *ngFor="let feature of features" class="feature">
+          <div
+            *ngFor="let feature of features; let i = index"
+            class="feature"
+            [ngClass]="{
+              'feature-center': i === 1 || i === 2,
+              'feature-left': i % 3 === 0,
+              'feature-right': i % 3 === 2
+            }"
+            appScrollAnimation
+          >
             <div class="icon">
               <img [src]="feature.icon" [alt]="feature.title" />
             </div>

@@ -2,12 +2,12 @@
   <div class="container-about">
     <div class="about-content">
       <div class="about-content-top">
-        <h5 class="section-subtitle">About us</h5>
-        <h2 class="section-title">
+        <h5 class="section-subtitle" appScrollAnimation>About us</h5>
+        <h2 class="section-title" appScrollAnimation>
           Reliable Logistics, <br />
           Driven by Excellence
         </h2>
-        <p class="about-description">
+        <p class="about-description" appScrollAnimation direction="right">
           We are a company with years of experience in logistics and freight car
           tracking. <br />
           Our mission is to provide accuracy, reliability, and efficiency for
@@ -17,26 +17,16 @@
           With us, you can be confident that your cargo is under full control.
         </p>
       </div>
+
       <div class="about-content-bottom">
-        <div class="about-checklist">
-          <div class="check-item">
+        <div class="about-checklist" appScrollAnimation>
+          <div class="check-item" *ngFor="let item of checklistItems">
             <span class="check-icon"><i class="fa-solid fa-check"></i></span>
-            <h4 class="check-title">Experts in Logistics Management</h4>
-          </div>
-          <div class="check-item">
-            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
-            <h4 class="check-title">Leaders in Global Logistics</h4>
-          </div>
-          <div class="check-item">
-            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
-            <h4 class="check-title">Transforming Transport & Logistics</h4>
-          </div>
-          <div class="check-item">
-            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
-            <h4 class="check-title">Driving Logistics Success</h4>
+            <h4 class="check-title">{{ item.title }}</h4>
           </div>
         </div>
-        <div class="about-message">
+
+        <div class="about-message" appScrollAnimation>
           <p class="message-text">
             We don’t just deliver goods — we create solutions that drive your
             success.
@@ -46,57 +36,21 @@
     </div>
 
     <div class="cards-container">
-      <div class="cards">
-        <div class="card">
-          <img src="https://glloc.com/assets/img/test/2.png" alt="Image 1" />
-          <div class="overlay">
-            <div class="content">
-              <img src="https://glloc.com/assets/img/test/2.png" alt="Icon" />
-              <h3><span class="counter">11</span>K+</h3>
-              <p>Delivered Goods</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
+      <div class="cards" *ngFor="let card of cards">
+        <div class="card" appScrollAnimation>
           <img
-            src="https://glloc.com/assets/img/test/2.png"
-            alt="Image 2"
-            class="card-image-1"
+            [src]="card.imgSrc"
+            [style.width]="card.imgWidth"
+            [style.height]="card.imgHeight"
+            alt="Card Image"
           />
           <div class="overlay">
             <div class="content">
-              <img src="https://glloc.com/assets/img/test/2.png" alt="Icon" />
-              <h3><span class="counter">8</span>K+</h3>
-              <p>Delivered Goods</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <img
-            src="https://glloc.com/assets/img/test/2.png"
-            alt="Image 3"
-            class="card-image-1"
-          />
-          <div class="overlay">
-            <div class="content">
-              <img src="https://glloc.com/assets/img/test/2.png" alt="Icon" />
-              <h3><span class="counter">15</span>K+</h3>
-              <p>Delivered Goods</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://glloc.com/assets/img/test/2.png" alt="Image 4" />
-          <div class="overlay">
-            <div class="content">
-              <img src="https://glloc.com/assets/img/test/2.png" alt="Icon" />
-              <h3><span class="counter">20</span>K+</h3>
-              <p>Delivered Goods</p>
+              <img [src]="card.iconSrc" alt="Card Icon" />
+              <h3>
+                <span class="counter">{{ card.counter }}</span> K+
+              </h3>
+              <p>{{ card.label }}</p>
             </div>
           </div>
         </div>

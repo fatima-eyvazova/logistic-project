@@ -14,14 +14,6 @@
         [formGroup]="registerForm"
         (ngSubmit)="onRegister()"
       >
-        <!-- <div class="form-field">
-          <input
-            formControlName="firstName"
-            class="input-field"
-            placeholder="Name Surname"
-          />
-        </div> -->
-
         <div class="form-field">
           <input
             id="email"
@@ -29,14 +21,15 @@
             formControlName="email"
             placeholder="E-mail"
           />
-          <!-- <p
+          <p
             *ngIf="
-              registerForm.controls.password.invalid &&
-              registerForm.controls.password.touched
+              registerForm.controls['email'].invalid &&
+              registerForm.controls['email'].touched
             "
+            class="error-message-register"
           >
-            Password must be at least 6 characters.
-          </p> -->
+            Please enter a valid email.
+          </p>
         </div>
 
         <div class="form-field">
@@ -45,6 +38,15 @@
             type="password"
             placeholder="Password"
           />
+          <p
+            *ngIf="
+              registerForm.controls['password'].invalid &&
+              registerForm.controls['password'].touched
+            "
+            class="error-message-register"
+          >
+            Password must be at least 6 characters.
+          </p>
         </div>
 
         <div class="role-selection">
@@ -61,7 +63,7 @@
 
         <div class="submit-btn">
           <button class="btn" type="submit" [disabled]="registerForm.invalid">
-            Next
+            Sign Up
           </button>
           <p>{{ message }}</p>
         </div>

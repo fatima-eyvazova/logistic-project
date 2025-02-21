@@ -116,9 +116,11 @@ $black-color: #00060f;
     .cards-container {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
       max-width: 700px;
 
       .cards {
+        height: 300px;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -133,9 +135,6 @@ $black-color: #00060f;
             height: auto;
             border-radius: 20px;
             filter: grayscale(30%);
-          }
-          .card-image-1 {
-            height: 350px;
           }
 
           .overlay {
@@ -179,5 +178,27 @@ $black-color: #00060f;
         }
       }
     }
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateX(-100px); // Soldan sağa animasyon
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .hidden-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .animate-right {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

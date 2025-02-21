@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollAnimationDirective } from '../../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-service',
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAnimationDirective],
   templateUrl: './service.component.html',
   styleUrl: './service.component.scss',
 })
@@ -69,7 +70,6 @@ export class ServiceComponent implements OnInit {
       extraClass: '',
     },
   ];
-  constructor() {}
 
   ngOnInit(): void {}
 }

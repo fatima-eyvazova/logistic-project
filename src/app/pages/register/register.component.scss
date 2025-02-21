@@ -58,6 +58,10 @@ $black-color: #000;
         .form-field {
           margin-bottom: 20px;
           text-align: left;
+          .error-message-register {
+            color: red;
+            padding: 5px;
+          }
 
           input {
             border-radius: 10px;
@@ -131,6 +135,8 @@ $black-color: #000;
           }
         }
         .submit-btn {
+          cursor: pointer;
+
           .btn {
             width: 100%;
             display: flex;
@@ -146,13 +152,9 @@ $black-color: #000;
             margin-top: 48px;
             margin-bottom: 8px;
             font-size: 20px;
-            disabled {
-              background-color: #cccccc;
+            &:disabled {
+              background-color: #72999c;
               cursor: not-allowed;
-            }
-
-            &:hover {
-              background-color: #209d8f;
             }
           }
         }
