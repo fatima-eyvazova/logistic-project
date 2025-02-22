@@ -6,7 +6,10 @@
 
   <div class="dashboard-header-right">
     <div class="light-change" (click)="toggleTheme()">
-      <img src="images/dark.svg" alt="" />
+      <img
+        [src]="isDarkMode ? 'images/dark1.svg' : 'images/lighit.svg'"
+        alt="Theme Icon"
+      />
     </div>
 
     <div class="user-profile" (click)="toggleDropdown()">
@@ -14,7 +17,11 @@
       <div *ngIf="dropdownVisible" class="dropdown-menu">
         <div class="balance-info">
           <div class="price">
-            <img src="images/icone-dashboard.svg" alt="icone" />
+            <img
+              src="images/icone-dashboard.svg"
+              alt="icone"
+              class="icone-price"
+            />
             <span class="balance-price">Balance </span>
           </div>
           <div class="number">11700</div>

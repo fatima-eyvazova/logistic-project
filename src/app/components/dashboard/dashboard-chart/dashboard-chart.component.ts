@@ -32,7 +32,7 @@ export class DashboardChartComponent {
     this.chartOptions = {
       chart: {
         type: 'area',
-        height: 500,
+        height: 400,
         zoom: { enabled: false },
       },
       series: data.series,

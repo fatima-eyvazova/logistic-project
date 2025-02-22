@@ -35,6 +35,7 @@ $black-color: #000;
 .register-page {
   @include flex-center;
   height: 100vh;
+  padding-top: 13%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url("https://img.freepik.com/free-vector/gradient-emerald-background_23-2150237162.jpg");
@@ -46,9 +47,9 @@ $black-color: #000;
       .logo-img {
         z-index: 2;
         position: absolute;
-        top: -1%;
+        top: 10%;
         left: 45.5%;
-        width: 200px;
+        width: 230px;
         @include responsive(mobile) {
           width: 120px;
         }
@@ -60,8 +61,8 @@ $black-color: #000;
       flex-direction: column;
       border-radius: 20px;
       background: #fff;
-      width: 25vw;
-      height: 50vh;
+      width: 27vw;
+      height: 53vh;
       padding: 35px;
 
       @include responsive(mobile) {
@@ -106,6 +107,10 @@ $black-color: #000;
             &:focus {
               border-color: #007bff;
             }
+          }
+          .error-message-register {
+            color: red;
+            padding: 20px 10px;
           }
         }
 

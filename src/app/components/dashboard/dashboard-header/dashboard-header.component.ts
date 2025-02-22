@@ -12,7 +12,7 @@ import { AuthService } from '../../../service/auth.service';
 })
 export class DashboardHeaderComponent {
   isDarkMode = false;
-  dropdownVisible: any;
+  dropdownVisible = false;
 
   constructor(
     private renderer: Renderer2,
@@ -35,6 +35,6 @@ export class DashboardHeaderComponent {
     } else {
       this.renderer.removeClass(body, 'dark-mode');
     }
-    console.log('Current body classes:', body.classList);
+    console.log('Dark mode:', this.isDarkMode ? 'ON' : 'OFF');
   }
 }

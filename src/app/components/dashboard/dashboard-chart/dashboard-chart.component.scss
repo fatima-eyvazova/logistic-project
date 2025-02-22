@@ -2,8 +2,13 @@
   width: 60.5vw;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 35px;
   background-color: #fff;
+  .title-chart {
+    font-weight: 600;
+    font-size: 1.35rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (max-width: 768px) {
