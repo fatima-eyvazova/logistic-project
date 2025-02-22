@@ -14,6 +14,7 @@ import {
 export class HeaderComponent implements AfterViewInit {
   @ViewChild('header', { static: false }) header!: ElementRef;
   isMenuOpen = false;
+  isDarkMode = false;
 
   ngAfterViewInit() {
     if (this.header) {

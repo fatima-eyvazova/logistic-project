@@ -236,6 +236,7 @@ $primary-color: #348f92;
 @media screen and (max-width: 768px) {
   #contact-us {
     .container-contact {
+      width: 84vw;
       .section-header {
         .section-title-contact {
           line-height: 43px;
@@ -264,6 +265,7 @@ $primary-color: #348f92;
             }
             .btn-primary {
               width: 50vw;
+              font-size: 13px;
             }
           }
         }

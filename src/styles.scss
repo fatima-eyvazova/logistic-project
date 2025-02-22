@@ -13,6 +13,10 @@
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+.dark-mode .logo-dashboard-tittle {
+  color: white !important;
+}
+
 .dark-mode {
   background-color: #0c0921 !important;
   color: rgb(130, 127, 127) !important;

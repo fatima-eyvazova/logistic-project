@@ -27,6 +27,11 @@ export class DashboardHeaderComponent {
     this.router.navigate(['/login']);
     console.log(localStorage.getItem('isLoggedIn'));
   }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    document.body.classList.toggle('dark-mode', this.isDarkMode);
+  }
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
     const body = document.body;
