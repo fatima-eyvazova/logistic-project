@@ -21,7 +21,9 @@
         *ngFor="let partner of partners"
         appScrollAnimation
       >
-        <img [src]="partner.img" [alt]="partner.name" />
+        <figure class="partner-item-figure">
+          <img [src]="partner.img" [alt]="partner.name" />
+        </figure>
         <div class="partner-info">
           <p class="partner-info-name">{{ partner.name }}</p>
           <span class="partner-info-description">{{

@@ -103,11 +103,13 @@ $primary-color: #348f92;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-        img {
+        .partner-item-figure {
           width: 150px;
           height: 150px;
-          object-fit: cover;
+          @include flex-center;
+          img {
+            object-fit: cover;
+          }
         }
 
         .partner-info {
