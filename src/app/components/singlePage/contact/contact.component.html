@@ -35,24 +35,17 @@
       </div>
 
       <div class="contact-info-container" appScrollAnimation>
-        <div class="contact-item">
+        <div class="contact-item" *ngFor="let item of contactInfo">
           <figure class="img-container">
-            <img src="images/phone.svg" alt="Phone Icon" class="icon-contact" />
+            <img
+              [src]="item.icon"
+              [alt]="item.title + ' Icon'"
+              class="icon-contact"
+            />
           </figure>
           <div class="contact-texts">
-            <h4 class="contact-title">Call or Text</h4>
-            <a class="contact-link" href="tel:123-456-7890">+994 512500701</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <figure class="img-container">
-            <img src="images/mail.svg" alt="Mail Icon" class="icon-contact" />
-          </figure>
-          <div class="contact-texts">
-            <h4 class="contact-title">Send Email</h4>
-            <a class="contact-link" href="mailto:office@glloc.com"
-              >office&#64;glloc.com</a
-            >
+            <h4 class="contact-title">{{ item.title }}</h4>
+            <a class="contact-link" [href]="item.link">{{ item.text }}</a>
           </div>
         </div>
       </div>
