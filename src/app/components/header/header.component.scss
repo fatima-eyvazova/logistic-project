@@ -166,8 +166,6 @@ header.scrolled {
     .header-container {
       border-radius: 0px;
       .nav-menu {
-        display: none;
-        flex-direction: column;
         &.active {
           display: flex;
         }
@@ -190,6 +188,9 @@ header.scrolled {
       .nav-menu {
         display: flex;
         flex-wrap: wrap;
+      }
+      .burger-menu {
+        display: none;
       }
     }
   }
