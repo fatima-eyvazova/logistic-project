@@ -35,23 +35,27 @@ $black-color: #000;
 .register-page {
   @include flex-center;
   height: 100vh;
-  padding-top: 13%;
-  background-size: 100% 100%;
+  padding: 5% 2%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/images/gradient-emerald-background_23-2150237162.avif");
 
   .register-box {
+    flex-direction: column;
+    @include flex-center;
+    max-width: 600px;
+    width: 100%;
     .logo {
       margin-bottom: 20px;
+      text-align: center;
 
       .logo-img {
-        z-index: 2;
-        position: absolute;
-        top: 10%;
-        left: 45.5%;
+        max-width: 100%;
         width: 230px;
+        height: auto;
+
         @include responsive(mobile) {
-          width: 120px;
+          width: 150px;
         }
       }
     }
@@ -61,34 +65,29 @@ $black-color: #000;
       flex-direction: column;
       border-radius: 20px;
       background: #fff;
-      width: 27vw;
-      height: 53vh;
-      padding: 35px;
+      width: 100%;
+      max-width: 500px;
+      padding: 45px;
 
       @include responsive(mobile) {
-        width: 90%;
-        height: auto;
-        padding: 20px;
-      }
-
-      @include responsive(tablet) {
-        width: 90%;
-        height: auto;
         padding: 20px;
       }
 
       .form-header {
         color: $green-color;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 700;
         text-align: center;
         margin-bottom: 20px;
+
         @include responsive(mobile) {
-          font-size: 18px;
+          font-size: 20px;
         }
       }
 
       .register-form {
+        width: 100%;
+
         .form-field {
           margin-bottom: 20px;
 
@@ -96,32 +95,18 @@ $black-color: #000;
             border-radius: 10px;
             border: 1px solid #e7e6e6;
             background: #fff;
-            width: 22vw;
+            width: 100%;
             padding: 20px;
-
-            @include responsive(mobile) {
-              width: 100%;
-              padding: 10px;
-            }
 
             &:focus {
               border-color: #007bff;
             }
           }
-          .error-message-register {
-            color: red;
-            padding: 20px 10px;
-          }
         }
-
         .role-selection {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 20px;
-
-          .role-item-text {
-            @include form-controle;
-          }
+          @include flex-center;
+          gap: 30px;
+          margin: 20px 0px;
           .checkbox-wrapper {
             display: flex;
             align-items: center;
@@ -167,22 +152,17 @@ $black-color: #000;
         }
 
         .submit-btn {
+          width: 100%;
+
           .btn {
             width: 100%;
-            padding: 18px;
-            font-size: 20px;
+            padding: 15px;
+            font-size: 18px;
             border-radius: 10px;
             background: $green-color;
             color: #fff;
             border: 1px solid $green-color;
             cursor: pointer;
-            margin-top: 48px;
-            margin-bottom: 8px;
-
-            @include responsive(mobile) {
-              padding: 10px;
-              font-size: 16px;
-            }
 
             &:disabled {
               background-color: #72999c;

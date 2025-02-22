@@ -1,10 +1,21 @@
 $green-color: #348f92;
+$black-color: #000;
+
+@mixin form-controle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $black-color;
+  margin: 0;
+  padding-left: 16px;
+  margin: 0 0 12px;
+}
 
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 @mixin responsive($breakpoint) {
   @if $breakpoint == mobile {
     @media (max-width: 768px) {
@@ -20,6 +31,7 @@ $green-color: #348f92;
     }
   }
 }
+
 .login {
   @include flex-center;
   flex-direction: column;
@@ -27,17 +39,12 @@ $green-color: #348f92;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url("https://img.freepik.com/free-vector/gradient-emerald-background_23-2150237162.jpg");
-
+  @include flex-center;
   .logo-login {
     margin-bottom: 20px;
 
     .glloc_logo {
-      z-index: 2;
-      position: absolute;
-      top: 0;
-      left: 45%;
       width: 220px;
-      height: 350px;
       @include responsive(mobile) {
         width: 120px;
       }
@@ -45,33 +52,30 @@ $green-color: #348f92;
   }
 
   .form-container-login {
+    @include flex-center;
+    flex-direction: column;
     border-radius: 20px;
     background: #fff;
-    width: 28vw;
-    height: 57vh;
-    padding: 40px;
-    margin-top: 10vw;
+    width: 100%;
+    max-width: 500px;
+    padding: 45px;
+
     @include responsive(mobile) {
-      width: 90%;
-      height: auto;
       padding: 20px;
     }
-    @include responsive(tablet) {
-      width: 70%;
-      height: auto;
-      padding: 20px;
-    }
+
     .login-form {
+      width: 100%;
+
       .form-header-login {
         color: $green-color;
-        font-size: 23px;
-        font-style: normal;
+        font-size: 24px;
         font-weight: 700;
-        line-height: normal;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+
         @include responsive(mobile) {
-          font-size: 18px;
+          font-size: 20px;
         }
       }
 
@@ -87,7 +91,7 @@ $green-color: #348f92;
           padding: 5px;
         }
         .form-input-login {
-          width: 24vw;
+          width: 100%;
           border-radius: 10px;
           border: 1px solid #e7e6e6;
           background: #fff;
@@ -98,7 +102,7 @@ $green-color: #348f92;
             padding: 10px;
           }
           @include responsive(tablet) {
-            width: 90%;
+            width: 100%;
           }
 
           &:focus {
