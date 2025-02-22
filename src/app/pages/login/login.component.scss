@@ -5,6 +5,21 @@ $green-color: #348f92;
   justify-content: center;
   align-items: center;
 }
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}
 .login {
   @include flex-center;
   flex-direction: column;
@@ -23,6 +38,9 @@ $green-color: #348f92;
       left: 45%;
       width: 220px;
       height: 350px;
+      @include responsive(mobile) {
+        width: 120px;
+      }
     }
   }
 
@@ -33,7 +51,16 @@ $green-color: #348f92;
     height: 57vh;
     padding: 40px;
     margin-top: 10vw;
-
+    @include responsive(mobile) {
+      width: 90%;
+      height: auto;
+      padding: 20px;
+    }
+    @include responsive(tablet) {
+      width: 70%;
+      height: auto;
+      padding: 20px;
+    }
     .login-form {
       .form-header-login {
         color: $green-color;
@@ -43,11 +70,18 @@ $green-color: #348f92;
         line-height: normal;
         text-align: center;
         margin-bottom: 30px;
+        @include responsive(mobile) {
+          font-size: 18px;
+        }
       }
 
       .form-login-input {
         width: 100%;
         margin-bottom: 25px;
+        @include responsive(mobile) {
+          height: 35px;
+          padding: 10px;
+        }
         .error-message-login {
           color: red;
           padding: 5px;
@@ -59,6 +93,13 @@ $green-color: #348f92;
           background: #fff;
           height: 40px;
           padding: 30px;
+          @include responsive(mobile) {
+            width: 79vw;
+            padding: 10px;
+          }
+          @include responsive(tablet) {
+            width: 90%;
+          }
 
           &:focus {
             border-color: #4e8ff7;
@@ -73,7 +114,10 @@ $green-color: #348f92;
         align-items: center;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
-
+        @include responsive(mobile) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
         .form-label-input {
           display: flex;
           align-items: center;
@@ -110,6 +154,7 @@ $green-color: #348f92;
       .btn-container-login {
         width: 100%;
         margin-bottom: 15px;
+
         .incorrect-message {
           color: red;
           text-align: center;
@@ -131,6 +176,10 @@ $green-color: #348f92;
           margin-top: 48px;
           margin-bottom: 8px;
 
+          @include responsive(mobile) {
+            padding: 10px;
+            font-size: 16px;
+          }
           &:hover {
             background-color: #0c6b51;
           }
@@ -146,6 +195,9 @@ $green-color: #348f92;
         text-align: center;
         font-size: 14px;
 
+        @include responsive(mobile) {
+          font-size: 12px;
+        }
         .info-login-text {
           text-align: center;
           color: #999;

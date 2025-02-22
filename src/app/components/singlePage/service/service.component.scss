@@ -184,7 +184,7 @@ $font-size-base: 16px;
           visibility: visible;
 
           .expand-icon img {
-            background: #fff;
+            background: #348f92;
             height: 60px;
             width: 60px;
             display: inline-block;
@@ -351,5 +351,55 @@ $font-size-base: 16px;
   .animate {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #service {
+    .service-top {
+      .service-top-container {
+        .expand-content {
+          .expand-container {
+            display: flex;
+            flex-direction: column !important;
+          }
+        }
+      }
+    }
+    .service-bottom {
+      .video-container {
+        .video-img {
+          .img-fluid {
+            height: 61vh;
+          }
+        }
+      }
+      .why-choose-us {
+        padding-top: 30px;
+        .container-why-choose {
+          height: auto;
+          .why-choose-header {
+            .title {
+              line-height: 30px;
+            }
+            p {
+              width: 80vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #service {
+    .service-bottom {
+      .why-choose-us {
+        .container-why-choose {
+          height: auto;
+        }
+      }
+    }
   }
 }

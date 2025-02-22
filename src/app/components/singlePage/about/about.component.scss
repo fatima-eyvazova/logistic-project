@@ -86,6 +86,7 @@ $black-color: #00060f;
           background-color: #f5f5f5;
           width: 60%;
           padding: 25px;
+          margin-bottom: 20px;
           position: relative;
           border-radius: 8px;
           margin-top: 40px;
@@ -120,7 +121,6 @@ $black-color: #00060f;
       max-width: 700px;
 
       .cards {
-        height: 300px;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -200,5 +200,35 @@ $black-color: #00060f;
   .animate-right {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    .container-about {
+      display: flex;
+      flex-direction: column;
+      .about-content {
+        .about-content-bottom {
+          .about-checklist {
+            width: 95%;
+          }
+          .about-message {
+            width: 90%;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #about {
+    .container-about {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+    }
   }
 }

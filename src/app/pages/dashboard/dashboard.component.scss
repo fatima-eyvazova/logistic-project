@@ -16,3 +16,17 @@
   justify-content: space-between;
   margin: 60px;
 }
+
+@media (max-width: 768px) {
+  div {
+    .balance-tables {
+      .balance-tables-container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .history-chart {
+      flex-direction: column;
+    }
+  }
+}

@@ -165,7 +165,7 @@ footer {
 
           .footer-logo-text {
             font-size: 20px;
-            color: #0e47a1;
+            color: #348f92;
             margin-left: 5px;
             font-weight: 500;
           }
@@ -194,7 +194,7 @@ footer {
             text-align: center;
             text-decoration: none;
             background: #e7edf6;
-            color: #0e47a1;
+            color: #348f92;
             @include flex-center;
             transition: 0.3s;
             i {
@@ -260,5 +260,39 @@ footer {
     border-bottom: 1px solid #e8d8d0;
     width: 5px;
     height: 4px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    .footer-top {
+      .footer-top-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .footer-img {
+          display: none;
+        }
+        .footer-top-content {
+          .footer-top-title {
+            margin-bottom: 20px;
+            width: 90vw !important;
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      .footer-bottom-center {
+        display: none;
+      }
+      .footer-bottom {
+        display: none;
+      }
+      .left-footer {
+        display: none;
+      }
+    }
   }
 }

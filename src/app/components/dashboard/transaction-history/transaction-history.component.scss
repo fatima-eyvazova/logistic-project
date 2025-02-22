@@ -1,10 +1,13 @@
 .panel {
-  padding: 20px;
+  padding: 50px 30px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 32vw;
-  height: 56vh;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+
   .panel-title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -18,9 +21,10 @@
 
     .transaction-date {
       font-size: 1rem;
+
       font-weight: 600;
       color: #4b5563;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .transaction-item {
@@ -62,8 +66,10 @@
         font-weight: 600;
 
         .info-history {
-          font-size: 0.9375rem;
+          font-size: 16px;
           color: #4b5563;
+          color: gray;
+          font-weight: 500;
         }
 
         p {
@@ -72,5 +78,12 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .panel {
+    width: 92vw;
+    margin-bottom: 20px;
   }
 }

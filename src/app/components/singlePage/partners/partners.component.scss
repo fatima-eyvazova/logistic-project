@@ -146,3 +146,41 @@ $primary-color: #348f92;
     animation: fadeInRight 0.8s ease-out forwards;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .partners-section {
+    .partners-container {
+      display: flex;
+      flex-direction: column;
+      .partners-list {
+        .partner-item {
+          width: 90vw;
+          .partner-info {
+            .partner-info-description {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .partners-section {
+    .partners-container {
+      display: flex;
+      flex-direction: column;
+      .partners-list {
+        .partner-item {
+          width: 90vw;
+          .partner-info {
+            .partner-info-description {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

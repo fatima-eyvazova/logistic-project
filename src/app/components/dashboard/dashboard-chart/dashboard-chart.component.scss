@@ -5,3 +5,9 @@
   padding: 15px;
   background-color: #fff;
 }
+
+@media (max-width: 768px) {
+  .chart-dashboard {
+    width: 90vw;
+  }
+}

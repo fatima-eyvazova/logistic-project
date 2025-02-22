@@ -149,3 +149,33 @@ header.scrolled {
   transition: all 0.3s ease;
   border-radius: 0px;
 }
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 60%;
+    top: 0px;
+
+    .header-container {
+      border-radius: 0px;
+      .nav-menu {
+        display: none;
+      }
+      .action-container {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  header {
+    width: 100vw;
+    top: 0px;
+
+    .header-container {
+      .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

@@ -71,3 +71,14 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .dashboard-tables {
+    display: flex;
+    flex-direction: column;
+    width: 97vw;
+    table {
+      width: 94vw;
+    }
+  }
+}

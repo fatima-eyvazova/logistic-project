@@ -12,19 +12,19 @@ export class PartnersComponent implements OnInit {
   partners = [
     {
       name: 'Azerbaijan Railways',
-      img: 'https://glloc.com/assets/img/partners/abs.svg',
+      img: 'images/ady.svg',
       description:
         'The leading railway operator in Azerbaijan, providing modern solutions for regional and international transportation.',
     },
     {
       name: 'Absheron Logistics',
-      img: '../../../assets/img/partners/abs.svg',
+      img: 'images/abs.svg',
       description:
         'A trusted logistics company offering fast and high-quality solutions with extensive expertise in the field.',
     },
     {
       name: 'SIGIS',
-      img: '../../../assets/img/partners/sigis.svg',
+      img: 'images/sigis.svg',
       description:
         'A reliable transportation company ensuring efficiency and innovation through technology-driven logistics solutions.',
     },
