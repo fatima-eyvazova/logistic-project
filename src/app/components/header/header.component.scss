@@ -33,7 +33,15 @@ header {
         font-weight: 500;
       }
     }
+    .burger-menu {
+      display: block;
 
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
     .nav-menu {
       list-style: none;
       display: flex;
@@ -152,13 +160,20 @@ header.scrolled {
 
 @media screen and (max-width: 768px) {
   header {
-    width: 60%;
+    width: 100%;
     top: 0px;
 
     .header-container {
       border-radius: 0px;
       .nav-menu {
         display: none;
+        flex-direction: column;
+        &.active {
+          display: flex;
+        }
+      }
+      .burger-menu {
+        display: block;
       }
       .action-container {
         display: none;
@@ -168,13 +183,37 @@ header.scrolled {
 }
 @media screen and (max-width: 1200px) {
   header {
-    width: 100vw;
+    width: 100%;
     top: 0px;
 
     .header-container {
       .nav-menu {
         display: flex;
         flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 478px) {
+  header {
+    width: 100%;
+    top: 0px;
+
+    .header-container {
+      border-radius: 0px;
+      .nav-menu {
+        display: none;
+      }
+      .active {
+        top: 67%;
+        right: 20px;
+        position: absolute;
+        background: white;
+        padding: 20px;
+      }
+      .action-container {
+        display: none;
       }
     }
   }

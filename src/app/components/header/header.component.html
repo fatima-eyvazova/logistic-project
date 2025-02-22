@@ -5,7 +5,10 @@
 
       <span class="logo-text">GLLOC</span>
     </a>
-    <ul class="nav-menu">
+    <button class="burger-menu" (click)="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-menu" [class.active]="isMenuOpen">
       <li><a (click)="scrollTo('home')">Home</a></li>
       <li><a (click)="scrollTo('tracking')">Tracking</a></li>
       <li><a (click)="scrollTo('about')">About Us</a></li>

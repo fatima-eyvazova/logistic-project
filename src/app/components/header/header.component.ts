@@ -13,11 +13,16 @@ import {
 })
 export class HeaderComponent implements AfterViewInit {
   @ViewChild('header', { static: false }) header!: ElementRef;
+  isMenuOpen = false;
 
   ngAfterViewInit() {
     if (this.header) {
       this.header.nativeElement.classList.remove('scrolled');
     }
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   @HostListener('window:scroll', ['$event'])
